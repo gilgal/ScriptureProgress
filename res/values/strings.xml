@@ -4,10 +4,15 @@
     <string name="app_name">Scripture Helper</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="old_testament">Old Testament</string>
     <string name="old_testament_button">Old Testament</string>
     <string name="new_testament_button">New Testament</string>
     <string name="book_of_mormon_button">Book of Mormon</string>
     <string name="doctrine_and_covenants_button">Doctrine &amp; Covenants</string>
     <string name="pearl_of_great_price_button">Pearl of Great Pricet</string>
+    <string name="title_activity_new_testament">NewTestamentActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_old_testament">OldTestamentActivity</string>
 
 </resources>
