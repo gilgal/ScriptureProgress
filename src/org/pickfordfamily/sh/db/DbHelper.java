@@ -2,6 +2,7 @@ package org.pickfordfamily.sh.db;
 
 import org.pickfordfamily.sh.db.ScriptureHelperContract.Volume;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -18,12 +19,15 @@ public class DbHelper extends SQLiteOpenHelper {
         Volume.COLUMN_NAME_VOLUME_ID + TEXT_TYPE + COMMA_SEP +
         Volume.COLUMN_NAME_NAME + TEXT_TYPE + COMMA_SEP +
         " )";
+    
+    private Context context;
 
     private static final String SQL_DELETE_ENTRIES =
         "DROP TABLE IF EXISTS " + Volume.TABLE_NAME;
 
     public DbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.context = context;
     }
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
@@ -39,20 +43,19 @@ public class DbHelper extends SQLiteOpenHelper {
     }
     
     public void init(){
-    	DbHelper mDbHelper = new DbHelper(getContext());
-		SQLiteDatabase db = mDbHelper.getWritableDatabase();
+//    	DbHelper mDbHelper = new DbHelper(context);
+		SQLiteDatabase db = getWritableDatabase();
 
 		// Create a new map of values, where column names are the keys
 		ContentValues values = new ContentValues();
-		values.put(FeedEntry.COLUMN_NAME_ENTRY_ID, id);
-		values.put(FeedEntry.COLUMN_NAME_TITLE, title);
-		values.put(FeedEntry.COLUMN_NAME_CONTENT, content);
+		values.put(Volume.COLUMN_NAME_VOLUME_ID, 1);
+		values.put(Volume.COLUMN_NAME_NAME, "Old Testament");
 
 		// Insert the new row, returning the primary key value of the new row
 		long newRowId;
 		newRowId = db.insert(
-		         FeedEntry.TABLE_NAME,
-		         FeedEntry.COLUMN_NAME_NULLABLE,
+		         Volume.TABLE_NAME,
+		         null,
 		         values);
     }
 }

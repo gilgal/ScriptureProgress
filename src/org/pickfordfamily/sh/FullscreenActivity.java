@@ -1,5 +1,6 @@
 package org.pickfordfamily.sh;
 
+import org.pickfordfamily.sh.db.DbHelper;
 import org.pickfordfamily.sh.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -166,5 +167,9 @@ public class FullscreenActivity extends Activity {
     public void openNewTestament(View view){
     	Intent intent = new Intent(this, NewTestamentActivity.class);
     	startActivity(intent);
+    }
+    
+    public void initDataBase(View view){
+    	DbHelper dbHelper = new DbHelper(view.getContext());
     }
 }

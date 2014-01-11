@@ -67,6 +67,14 @@
                 android:onClick="openNewTestament" />
            
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="231dp"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:onClick="initDataBase" />
+
     </FrameLayout>
 
 </FrameLayout>
