@@ -35,14 +35,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090007;
-        public static final int button1=0x7f090005;
+        public static final int action_settings=0x7f090008;
+        public static final int button1=0x7f090006;
         public static final int dummy_button=0x7f090002;
+        public static final int editText1=0x7f090005;
         public static final int fullscreen_content=0x7f090000;
         public static final int fullscreen_content_controls=0x7f090001;
         public static final int new_testament_button=0x7f090004;
         public static final int old_testament_button=0x7f090003;
-        public static final int textView1=0x7f090006;
+        public static final int textView1=0x7f090007;
     }
     public static final class layout {
         public static final int activity_fullscreen=0x7f030000;

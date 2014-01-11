@@ -1,6 +1,7 @@
 package org.pickfordfamily.sh;
 
-import org.pickfordfamily.sh.db.DbHelper;
+import org.pickfordfamily.sh.db.InitData;
+import org.pickfordfamily.sh.db.Queries;
 import org.pickfordfamily.sh.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -170,6 +172,12 @@ public class FullscreenActivity extends Activity {
     }
     
     public void initDataBase(View view){
-    	DbHelper dbHelper = new DbHelper(view.getContext());
+//    	DbHelper dbHelper = new DbHelper(view.getContext());
+    	InitData id = new InitData(view.getContext());
+    	id.init();
+    	Queries qs = new Queries(view.getContext());
+    	String name = qs.getVolume(1L);
+    	EditText text = (EditText) findViewById(R.id.editText1);
+    	text.setText(name);
     }
 }

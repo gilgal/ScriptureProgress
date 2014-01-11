@@ -3,7 +3,7 @@
 
     <string name="app_name">Scripture Helper</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_content">Sample\nCONTENT</string>
     <string name="old_testament">Old Testament</string>
     <string name="old_testament_button">Old Testament</string>
     <string name="new_testament_button">New Testament</string>

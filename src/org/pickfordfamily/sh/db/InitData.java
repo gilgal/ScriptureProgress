@@ -8,7 +8,13 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class InitData {
 
-	public void init(Context context){
+	private Context context;
+	
+	public InitData(Context context){
+		this.context = context;
+	}
+	
+	public void init(){
 		
 		DbHelper mDbHelper = new DbHelper(context);
 		SQLiteDatabase db = mDbHelper.getWritableDatabase();
@@ -24,6 +30,31 @@ public class InitData {
 		         Volume.TABLE_NAME,
 		         null,
 		         values);
+		
+		values = new ContentValues();
+		values.put(Volume.COLUMN_NAME_VOLUME_ID, 2);
+		values.put(Volume.COLUMN_NAME_NAME, "New Testament");
+		insert(db,values);
+		
+		values = new ContentValues();
+		values.put(Volume.COLUMN_NAME_VOLUME_ID, 3);
+		values.put(Volume.COLUMN_NAME_NAME, "Book of Mormon");
+		insert(db,values);
+
+		values = new ContentValues();
+		values.put(Volume.COLUMN_NAME_VOLUME_ID, 4);
+		values.put(Volume.COLUMN_NAME_NAME, "Doctrine and Covenants");
+		insert(db,values);
+		
+		values = new ContentValues();
+		values.put(Volume.COLUMN_NAME_VOLUME_ID, 5);
+		values.put(Volume.COLUMN_NAME_NAME, "Pearl of Great Price");
+		insert(db,values);		
+		
+	}
+	
+	private void insert(SQLiteDatabase db, ContentValues values){
+		db.insert(Volume.TABLE_NAME, null, values);
 	}
 	
 }

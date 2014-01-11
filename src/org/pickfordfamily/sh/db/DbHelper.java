@@ -17,8 +17,7 @@ public class DbHelper extends SQLiteOpenHelper {
         "CREATE TABLE " + Volume.TABLE_NAME + " (" +
         Volume._ID + " INTEGER PRIMARY KEY," +
         Volume.COLUMN_NAME_VOLUME_ID + TEXT_TYPE + COMMA_SEP +
-        Volume.COLUMN_NAME_NAME + TEXT_TYPE + COMMA_SEP +
-        " )";
+        Volume.COLUMN_NAME_NAME + TEXT_TYPE + " )";
     
     private Context context;
 
