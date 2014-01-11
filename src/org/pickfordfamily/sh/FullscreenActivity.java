@@ -162,4 +162,9 @@ public class FullscreenActivity extends Activity {
     	Intent intent = new Intent(this, OldTestamentActivity.class);
     	startActivity(intent);
     }
+    
+    public void openNewTestament(View view){
+    	Intent intent = new Intent(this, NewTestamentActivity.class);
+    	startActivity(intent);
+    }
 }
